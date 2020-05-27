@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Wael Delacroix, st, LIC=7QQMA-1LCHZ-ZMCR1-Q5XS0-MI3FH-T058F
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Cortex-M0/M0+ for ST  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TARMCM1.DLL V1.14.1.0
+ 
+<h2>Project:</h2>
+C:\i-cube-lrwan_V1.1.5\i-cube-lrwan_V1.1.5\STM32CubeExpansion_LRWAN_V1.1.5\Projects\Multi\Applications\LoRa\End_Node\MDK-ARM\B-L072Z-LRWAN1\Lora.uvprojx
+Project File Date:  05/05/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'mlm32l07x01'
+compiling lora-test.c...
+compiling main.c...
+..\..\src\main.c(207): warning:  #177-D: variable "Bytedata"  was declared but never referenced
+  	uint8_t Bytedata=0;
+..\..\src\main.c(182): warning:  #177-D: variable "TxLedTimer"  was declared but never referenced
+  static TimerEvent_t TxLedTimer;
+..\..\src\main.c(531): warning:  #177-D: function "OnTimerLedEvent"  was declared but never referenced
+  static void OnTimerLedEvent( void )
+..\..\src\main.c: 3 warnings, 0 errors
+compiling lora.c...
+linking...
+Program Size: Code=43556 RO-data=1636 RW-data=452 ZI-data=4620  
+FromELF: creating hex file...
+".\mlm32l07x01\NUCLEO_CUBE_LORA.axf" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L0xx_DFP.2.0.1.pack
+                Keil.STM32L0xx_DFP.2.0.1
+                STMicroelectronics STM32L0 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_mlm32l07x01
+  C:\Users\waeld\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:11
+</pre>
+</body>
+</html>
