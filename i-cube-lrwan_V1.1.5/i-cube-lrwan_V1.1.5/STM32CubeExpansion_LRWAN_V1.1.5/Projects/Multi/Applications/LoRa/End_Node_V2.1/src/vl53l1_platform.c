@@ -43,6 +43,7 @@
 #include <time.h>
 #include <math.h>
 #include "vl53l1_error_codes.h"
+#include "hw.h"
 
 
 
@@ -80,9 +81,12 @@ int _I2CWrite(uint16_t Dev, uint8_t *pdata, uint32_t count) {
     int i2c_time_out = I2C_TIME_OUT_BASE+ count* I2C_TIME_OUT_BYTE;
 
     status = HAL_I2C_Master_Transmit(&hi2c1, Dev, pdata, count, i2c_time_out);
-    if (status) {
-        //VL6180x_ErrLog("I2C error 0x%x %d len", dev->I2cAddr, len);
-        //XNUCLEO6180XA1_I2C1_Init(&hi2c1);
+    if (status == HAL_ERROR) 
+		{
+				if (hi2c1.ErrorCode == HAL_I2C_ERROR_AF)
+				{
+					LED_On( LED_BLUE ) ; 
+				}			   
     }
     return status;
 }

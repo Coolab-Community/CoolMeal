@@ -46,3 +46,15 @@
 .\mlm32l07x01\vl53l1_platform.o: ..\..\inc\vl53l1_platform_user_config.h
 .\mlm32l07x01\vl53l1_platform.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 .\mlm32l07x01\vl53l1_platform.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\hw.h
+.\mlm32l07x01\vl53l1_platform.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\hw_conf.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\..\..\..\..\..\Drivers\BSP\B-L072Z-LRWAN1\b-l072z-lrwan1.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\mlm32l0xx_hw_conf.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\hw_gpio.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\hw_spi.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\hw_rtc.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\..\..\..\..\..\Middlewares\Third_Party\Lora\Utilities\utilities.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\hw_msp.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\debug.h
+.\mlm32l07x01\vl53l1_platform.o: ..\..\inc\vcom.h

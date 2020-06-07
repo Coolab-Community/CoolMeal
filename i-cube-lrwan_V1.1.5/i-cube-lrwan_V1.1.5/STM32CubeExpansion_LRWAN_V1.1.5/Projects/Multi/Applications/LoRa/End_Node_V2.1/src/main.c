@@ -1,4 +1,4 @@
-//FREEROOM
+//COOLMEAL
 /******************************************************************************
   * @file    main.c
   * @author  MCD Application Team
@@ -74,7 +74,7 @@ uint8_t byteData;
 #define LEFT 0
 #define RIGHT 1
 
-#define DIST_THRESHOLD_MAX  1300
+#define DIST_THRESHOLD_MAX  1100
 int status = 0;
 /* Private define ------------------------------------------------------------*/
 
@@ -97,7 +97,7 @@ int status = 0;
  * LoRaWAN Adaptive Data Rate
  * @note Please note that when ADR is enabled the end-device should be static
  */
-#define LORAWAN_ADR_STATE LORAWAN_ADR_ON
+#define LORAWAN_ADR_STATE LORAWAN_ADR_OFF
 /*!
  * LoRaWAN Default data Rate Data Rate
  * @note Please note that LORAWAN_DEFAULT_DATA_RATE is used only when ADR is disabled 
@@ -270,9 +270,7 @@ int main( void )
   {
 		if (dataReady) {	
 				//VL53L1X_CheckForDataReady(dev, &dataReady);
-	
-			
-        
+	    
 		dataReady = 0;
 		VL53L1X_GetRangeStatus(dev, &RangeStatus);
 				status += VL53L1_RdByte(dev, 0x010F, &byteData);
@@ -293,6 +291,7 @@ int main( void )
 		Zone = Zone%2;
 				PRINTF("Distance :%i,People : %i,RangeState : %i,Status : %i,ID:%i\n\r", Distance,PplCounter,RangeStatus,status,byteData);
 		//Send();
+		}
 		if(Aliveframe)
 			{
 			Send();
@@ -334,12 +333,7 @@ int main( void )
 		}*/   
     
     /* USER CODE BEGIN 2 */
-			//PRINTF("avant while\n\r");
-			 
-		//PRINTF("coucou\n\r");
 		
-		
-    }
     /* USER CODE END 2 */
 		
 }
@@ -402,7 +396,8 @@ static void Send( void )
 
   AppData.Buff[i++] = cchannel++;
   AppData.Buff[i++] = LPP_DATATYPE_DIGITAL_INPUT; 
-  AppData.Buff[i++] = batteryLevel*100/254;
+  //AppData.Buff[i++] = batteryLevel*100/254;
+	AppData.Buff[i++] = hi2c1.ErrorCode;
 	AppData.Buff[i++] = cchannel++;
   AppData.Buff[i++] = LPP_DATATYPE_PRESENCE; 
   AppData.Buff[i++] = PplCounter;
@@ -667,6 +662,8 @@ void ProcessPeopleCountingData(int16_t Distance, uint8_t zone) {
 					// This an exit
 					PplCounter--;
 					PRINTF("counter--\n\r");
+					
+					
 				}
 			}
 			

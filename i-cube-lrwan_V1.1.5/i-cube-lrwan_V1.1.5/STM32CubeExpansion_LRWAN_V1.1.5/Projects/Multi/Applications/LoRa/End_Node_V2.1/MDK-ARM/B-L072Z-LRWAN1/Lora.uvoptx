@@ -232,22 +232,6 @@
         <Bp>
           <Number>5</Number>
           <Type>0</Type>
-          <LineNumber>565</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134239348</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\src\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\NUCLEO_CUBE_LORA\../../src/main.c\565</Expression>
-        </Bp>
-        <Bp>
-          <Number>6</Number>
-          <Type>0</Type>
           <LineNumber>386</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
@@ -262,7 +246,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>7</Number>
+          <Number>6</Number>
           <Type>0</Type>
           <LineNumber>388</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -278,7 +262,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>8</Number>
+          <Number>7</Number>
           <Type>0</Type>
           <LineNumber>390</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -294,7 +278,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>9</Number>
+          <Number>8</Number>
           <Type>0</Type>
           <LineNumber>392</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -310,7 +294,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>10</Number>
+          <Number>9</Number>
           <Type>0</Type>
           <LineNumber>418</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -326,7 +310,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>11</Number>
+          <Number>10</Number>
           <Type>0</Type>
           <LineNumber>420</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -342,7 +326,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>12</Number>
+          <Number>11</Number>
           <Type>0</Type>
           <LineNumber>422</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -358,7 +342,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>13</Number>
+          <Number>12</Number>
           <Type>0</Type>
           <LineNumber>424</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -374,39 +358,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>14</Number>
-          <Type>0</Type>
-          <LineNumber>563</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\src\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>15</Number>
-          <Type>0</Type>
-          <LineNumber>566</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\src\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>16</Number>
+          <Number>13</Number>
           <Type>0</Type>
           <LineNumber>662</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -422,7 +374,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>17</Number>
+          <Number>14</Number>
           <Type>0</Type>
           <LineNumber>56</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -438,7 +390,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>18</Number>
+          <Number>15</Number>
           <Type>0</Type>
           <LineNumber>334</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -454,7 +406,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>19</Number>
+          <Number>16</Number>
           <Type>0</Type>
           <LineNumber>336</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -470,7 +422,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>20</Number>
+          <Number>17</Number>
           <Type>0</Type>
           <LineNumber>338</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -486,7 +438,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>21</Number>
+          <Number>18</Number>
           <Type>0</Type>
           <LineNumber>340</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -502,7 +454,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>22</Number>
+          <Number>19</Number>
           <Type>0</Type>
           <LineNumber>596</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -518,7 +470,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>23</Number>
+          <Number>20</Number>
           <Type>0</Type>
           <LineNumber>599</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -534,7 +486,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>24</Number>
+          <Number>21</Number>
           <Type>0</Type>
           <LineNumber>601</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -550,7 +502,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>25</Number>
+          <Number>22</Number>
           <Type>0</Type>
           <LineNumber>603</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -566,7 +518,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>26</Number>
+          <Number>23</Number>
           <Type>0</Type>
           <LineNumber>606</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -582,7 +534,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>27</Number>
+          <Number>24</Number>
           <Type>0</Type>
           <LineNumber>655</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -598,7 +550,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>28</Number>
+          <Number>25</Number>
           <Type>0</Type>
           <LineNumber>658</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -614,7 +566,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>29</Number>
+          <Number>26</Number>
           <Type>0</Type>
           <LineNumber>661</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -630,7 +582,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>30</Number>
+          <Number>27</Number>
           <Type>0</Type>
           <LineNumber>662</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -646,7 +598,7 @@
           <Expression></Expression>
         </Bp>
         <Bp>
-          <Number>31</Number>
+          <Number>28</Number>
           <Type>0</Type>
           <LineNumber>664</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -1329,7 +1281,7 @@
 
   <Group>
     <GroupName>Projects/End_Node</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
