@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\mlm32l07x01\NUCLEO_CUBE_LORA.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\mlm32l07x01\NUCLEO_CUBE_LORA.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Jun 07 16:10:18 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jun 10 15:42:08 2020
 <BR><P>
 <H3>Maximum Stack Usage =        552 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2291,7 +2291,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mlm32l07x01.o(.constdata)
 </UL>
-<P><STRONG><a name="[4e]"></a>SX1276IoInit</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, mlm32l07x01.o(i.SX1276IoInit))
+<P><STRONG><a name="[4e]"></a>SX1276IoInit</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, mlm32l07x01.o(i.SX1276IoInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SX1276IoInit &rArr; HW_GPIO_Init &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HW_GPIO_Init
@@ -2657,7 +2657,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mlm32l07x01.o(.constdata)
 </UL>
-<P><STRONG><a name="[5]"></a>SX1276SetXO</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, mlm32l07x01.o(i.SX1276SetXO))
+<P><STRONG><a name="[5]"></a>SX1276SetXO</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, mlm32l07x01.o(i.SX1276SetXO))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = SX1276SetXO &rArr; DelayMs &rArr; HW_RTC_DelayMs &rArr; HW_RTC_GetTimerValue &rArr; HW_RTC_GetCalendarValue &rArr; HAL_RTC_GetTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HW_GPIO_Write
@@ -3183,7 +3183,7 @@ Global Symbols
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VL53L1_RdWord
 </UL>
 
-<P><STRONG><a name="[1a2]"></a>_I2CWrite</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, vl53l1_platform.o(i._I2CWrite))
+<P><STRONG><a name="[1a2]"></a>_I2CWrite</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, vl53l1_platform.o(i._I2CWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = _I2CWrite &rArr; HAL_I2C_Master_Transmit &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_On

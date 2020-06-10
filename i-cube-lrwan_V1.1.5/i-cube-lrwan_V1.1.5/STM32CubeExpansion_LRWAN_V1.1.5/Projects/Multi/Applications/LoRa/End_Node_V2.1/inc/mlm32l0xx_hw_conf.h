@@ -112,8 +112,8 @@ Maintainer: Miguel Luis and Gregory Cristian
 #define RADIO_DIO_5_PIN                           GPIO_PIN_4
 #endif
 
-#define RADIO_TCXO_VCC_PORT                       GPIOA//GPIOA GPIOH = grasshoper module
-#define RADIO_TCXO_VCC_PIN                        GPIO_PIN_12//GPIO_PIN_12 PIN_1 = grasshoper module 
+#define RADIO_TCXO_VCC_PORT                       GPIOH//GPIOA GPIOH = grasshoper module
+#define RADIO_TCXO_VCC_PIN                        GPIO_PIN_1//GPIO_PIN_12 PIN_1 = grasshoper module 
 
 #define RADIO_ANT_SWITCH_PORT_RX                  GPIOA //CRF1
 #define RADIO_ANT_SWITCH_PIN_RX                   GPIO_PIN_1
