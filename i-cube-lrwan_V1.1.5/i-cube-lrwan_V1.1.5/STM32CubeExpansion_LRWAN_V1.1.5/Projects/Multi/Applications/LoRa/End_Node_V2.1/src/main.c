@@ -76,6 +76,7 @@ uint8_t byteData;
 
 #define DIST_THRESHOLD_MAX  1100
 int status = 0;
+uint8_t status1=0;
 /* Private define ------------------------------------------------------------*/
 
 /*!
@@ -89,6 +90,9 @@ int status = 0;
 #define LPP_DATATYPE_PRESENCE       0x66  
 #define LPP_DATATYPE_BAROMETER      0x73
 #define LPP_APP_PORT 99
+
+#define Polling_TOF 0
+#define DevA1 1
 /*!
  * Defines the application data transmission duty cycle. 5s, value in [ms].
  */
@@ -245,7 +249,7 @@ int main( void )
 		
   TimerInit( &TxLedTimer, OnTimerLedEvent );
   
-  TimerSetValue(  &TxLedTimer, 1200000);
+  TimerSetValue(  &TxLedTimer, 600000);
   
   
 	//LoraStartTx(TX_ON_EVENT);
@@ -268,9 +272,11 @@ int main( void )
 		TimerStart( &TxLedTimer);
   while( 1 )
   {
+		#if(Polling_TOF)
+		VL53L1X_CheckForDataReady(dev, &dataReady);
+		#endif
 		if (dataReady) {	
-				//VL53L1X_CheckForDataReady(dev, &dataReady);
-	    
+				
 		dataReady = 0;
 		VL53L1X_GetRangeStatus(dev, &RangeStatus);
 				status += VL53L1_RdByte(dev, 0x010F, &byteData);
@@ -292,6 +298,16 @@ int main( void )
 				PRINTF("Distance :%i,People : %i,RangeState : %i,Status : %i,ID:%i\n\r", Distance,PplCounter,RangeStatus,status,byteData);
 		//Send();
 		}
+		//else
+		//{
+			//status1 = VL53L1_RdByte(dev, 0x010F, &byteData);
+			//if(byteData!=234 || status1!=0){
+				//LED_On(LED_GREEN);
+			//}
+				
+				
+		//}
+		
 		if(Aliveframe)
 			{
 			Send();
@@ -314,6 +330,8 @@ int main( void )
 			NobodyFlag=0;
 			
 		}
+		
+	
 		
 		
 		//DISABLE_IRQ();
@@ -654,14 +672,23 @@ void ProcessPeopleCountingData(int16_t Distance, uint8_t zone) {
 				// check exit or entry. no need to check PathTrack[0] == 0 , it is always the case
 
 				if ((PathTrack[1] == 1)  && (PathTrack[2] == 3) && (PathTrack[3] == 2)) {
+					#if(DevA1)
 					// This an entry
 					PplCounter++;
 					PRINTF("counter++\n\r");
-
+					#else 
+					PplCounter--;
+					PRINTF("counter--\n\r");
+					#endif
 				} else if ((PathTrack[1] == 2)  && (PathTrack[2] == 3) && (PathTrack[3] == 1)) {
+					#if (DevA1)
 					// This an exit
 					PplCounter--;
 					PRINTF("counter--\n\r");
+					#else
+					PplCounter++;
+					PRINTF("counter++\n\r");
+					#endif
 					
 					
 				}
@@ -688,17 +715,19 @@ void ProcessPeopleCountingData(int16_t Distance, uint8_t zone) {
 
 }
 
+#if(!Polling_TOF)
 void VL53L1X_Callback(){
 	dataReady=1;
 	//HAL_Delay(20);
 	PRINTF("callback\n\r");
-	
 }
+#endif	
 void MX_GPIO_Init(void)
 {
     /* -1- Enable GPIO Clock (to be able to program the configuration registers) */
   
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
+	#if(!Polling_TOF)
  /*Configure GPIO pin : PB2 */
   GPIO_InitStruct.Pin = GPIO_PIN_2;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
@@ -707,7 +736,7 @@ void MX_GPIO_Init(void)
 	
 	HW_GPIO_SetIrq( GPIOB, GPIO_PIN_2, 0, VL53L1X_Callback);
 	
-	
+	#endif
 	
 }
 
